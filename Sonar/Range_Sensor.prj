@@ -1,0 +1,5 @@
+vhdl work "Counter.vhd"
+vhdl work "Trigger_generator.vhd"
+vhdl work "Distance_calculation.vhd"
+vhdl work "BCD_converter.vhd"
+vhdl work "Range_Sensor.vhd"

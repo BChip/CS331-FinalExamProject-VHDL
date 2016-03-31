@@ -1,0 +1,5 @@
+set -tmpdir "C:/Xilinx/sonar/Sonar/xst/projnav.tmp"
+set -xsthdpdir "C:/Xilinx/sonar/Sonar/xst"
+elaborate
+-ifn BCD_converter.prj
+-ifmt mixed

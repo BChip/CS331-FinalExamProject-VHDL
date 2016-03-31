@@ -1,0 +1,5 @@
+vhdl work "C:\Xilinx\sonar\Sonar\Counter.vhd"
+vhdl work "C:\Xilinx\sonar\Sonar\Trigger_generator.vhd"
+vhdl work "C:\Xilinx\sonar\Sonar\Distance_calculation.vhd"
+vhdl work "C:\Xilinx\sonar\Sonar\BCD_converter.vhd"
+vhdl work "C:\Xilinx\sonar\Sonar\Range_Sensor.vhd"

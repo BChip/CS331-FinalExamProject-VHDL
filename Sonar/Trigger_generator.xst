@@ -1,0 +1,5 @@
+set -tmpdir "C:/Xilinx/sonar/Sonar/xst/projnav.tmp"
+set -xsthdpdir "C:/Xilinx/sonar/Sonar/xst"
+elaborate
+-ifn Trigger_generator.prj
+-ifmt mixed
