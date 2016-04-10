@@ -1,0 +1,14 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Sat Apr 09 22:02:18 2016
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "led0" LOCATE = SITE "F12" LEVEL 1;
+COMP "clk" LOCATE = SITE "C9" LEVEL 1;
+COMP "pulse_pin" LOCATE = SITE "B6" LEVEL 1;
+PIN pulse_pin_pin<0> = BEL "pulse_pin" PINNAME PAD;
+PIN "pulse_pin_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "Trigger_pin" LOCATE = SITE "A6" LEVEL 1;
+NET "clk_BUFGP/IBUFG" BEL "clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+SCHEMATIC END;
+

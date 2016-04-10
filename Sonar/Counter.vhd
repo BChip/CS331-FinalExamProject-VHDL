@@ -45,7 +45,7 @@ process(clk,reset)
 	
 	begin
 	if(reset='0') then
-		count <= (others => '0');
+		count <= (others => '0');  --This is required since count is a vector.
 		elsif(clk'event and clk = '1') then
 		if(enable = '1') then
 			count <= count + 1;

@@ -1,0 +1,99 @@
+
+****** PlanAhead v14.7 (64-bit)
+  **** Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
+    ** Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
+
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source /home/waqas/CS331-FinalExamProject-VHDL/Sonar/pa.fromHdl.tcl
+# create_project -name Sonar -dir "/home/waqas/CS331-FinalExamProject-VHDL/Sonar/planAhead_run_1" -part xc3s100evq100-5
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:28 . Memory (MB): peak = 2654.844 ; gain = 6.008
+# set_param project.pinAheadLayout yes
+# set srcset [get_property srcset [current_run -impl]]
+# set_property target_constrs_file "Spartan-3e.ucf" [current_fileset -constrset]
+Adding file '/home/waqas/CS331-FinalExamProject-VHDL/Sonar/Spartan-3e.ucf' to fileset 'constrs_1'
+# set hdlfile [add_files [list {Counter.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {Trigger_generator.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {Distance_calculation.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {BCD_converter.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {Range_Sensor.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {lcd_controller.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {TopDesign.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set_property top TopDesign $srcset
+# add_files [list {Spartan-3e.ucf}] -fileset [get_property constrset [current_run]]
+# open_rtl_design -part xc3s100evq100-5
+Using Verific elaboration
+Parsing VHDL file "/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/lib/synplify/synattr.vhd" into library synplify
+Parsing VHDL file "/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/lib/synplify/synattr.vhd" into library synplify
+Parsing VHDL file "/home/waqas/CS331-FinalExamProject-VHDL/Sonar/Counter.vhd" into library work
+Parsing VHDL file "/home/waqas/CS331-FinalExamProject-VHDL/Sonar/Trigger_generator.vhd" into library work
+Parsing VHDL file "/home/waqas/CS331-FinalExamProject-VHDL/Sonar/Distance_calculation.vhd" into library work
+WARNING: [HDL 9-946] Actual for formal port reset is neither a static name nor a globally static expression [/home/waqas/CS331-FinalExamProject-VHDL/Sonar/Distance_calculation.vhd:52]
+Parsing VHDL file "/home/waqas/CS331-FinalExamProject-VHDL/Sonar/BCD_converter.vhd" into library work
+Parsing VHDL file "/home/waqas/CS331-FinalExamProject-VHDL/Sonar/Range_Sensor.vhd" into library work
+Parsing VHDL file "/home/waqas/CS331-FinalExamProject-VHDL/Sonar/lcd_controller.vhd" into library work
+Parsing VHDL file "/home/waqas/CS331-FinalExamProject-VHDL/Sonar/TopDesign.vhd" into library work
+WARNING: [HDL 9-946] Actual for formal port lcd_data is neither a static name nor a globally static expression [/home/waqas/CS331-FinalExamProject-VHDL/Sonar/TopDesign.vhd:73]
+INFO: [Designutils 20-910] Reading macro library /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn
+Parsing EDIF File [/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn]
+Finished Parsing EDIF File [/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn]
+Loading clock regions from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan3e/spartan3e/xc3s100e/ClockRegion.xml
+Loading clock buffers from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan3e/spartan3e/xc3s100e/ClockBuffers.xml
+Loading package from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan3e/spartan3e/xc3s100e/vq100/Package.xml
+Loading io standards from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/spartan3e/IOStandards.xml
+INFO: [Device 21-19] Loading pkg sso from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan3e/spartan3e/xc3s100e/vq100/SSORules.xml
+Loading list of drcs for the architecture : /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/spartan3e/spartan3e/drc.xml
+INFO: [Timing 38-77] Reading timing library /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan3e/spartan3e/spartan3e-5.lib.
+INFO: [Timing 38-34] Done reading timing library /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan3e/spartan3e/spartan3e-5.lib.
+Parsing UCF File [/home/waqas/CS331-FinalExamProject-VHDL/Sonar/Spartan-3e.ucf]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site T9 [/home/waqas/CS331-FinalExamProject-VHDL/Sonar/Spartan-3e.ucf:2]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site P93 [/home/waqas/CS331-FinalExamProject-VHDL/Sonar/Spartan-3e.ucf:35]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site P96 [/home/waqas/CS331-FinalExamProject-VHDL/Sonar/Spartan-3e.ucf:36]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'lcd_data[5]' [/home/waqas/CS331-FinalExamProject-VHDL/Sonar/Spartan-3e.ucf:37]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site P100 [/home/waqas/CS331-FinalExamProject-VHDL/Sonar/Spartan-3e.ucf:38]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site P103 [/home/waqas/CS331-FinalExamProject-VHDL/Sonar/Spartan-3e.ucf:39]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site P105 [/home/waqas/CS331-FinalExamProject-VHDL/Sonar/Spartan-3e.ucf:40]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site P108 [/home/waqas/CS331-FinalExamProject-VHDL/Sonar/Spartan-3e.ucf:41]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site P113 [/home/waqas/CS331-FinalExamProject-VHDL/Sonar/Spartan-3e.ucf:42]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site P127 [/home/waqas/CS331-FinalExamProject-VHDL/Sonar/Spartan-3e.ucf:43]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site P118 [/home/waqas/CS331-FinalExamProject-VHDL/Sonar/Spartan-3e.ucf:44]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site P124 [/home/waqas/CS331-FinalExamProject-VHDL/Sonar/Spartan-3e.ucf:45]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site P122 [/home/waqas/CS331-FinalExamProject-VHDL/Sonar/Spartan-3e.ucf:46]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site R1 [/home/waqas/CS331-FinalExamProject-VHDL/Sonar/Spartan-3e.ucf:115]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site P1 [/home/waqas/CS331-FinalExamProject-VHDL/Sonar/Spartan-3e.ucf:116]
+Finished Parsing UCF File [/home/waqas/CS331-FinalExamProject-VHDL/Sonar/Spartan-3e.ucf]
+INFO: [Designutils 20-20] Invalid constraints found, use command 'write_ucf -constraints invalid <file>' to save all the invalid constraints to a file
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Phase 0 | Netlist Checksum: e39114c2
+open_rtl_design: Time (s): cpu = 00:00:29 ; elapsed = 00:01:13 . Memory (MB): peak = 2753.953 ; gain = 92.977
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+exit
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Sat Apr  9 18:00:03 2016...
+INFO: [Common 17-83] Releasing license: PlanAhead

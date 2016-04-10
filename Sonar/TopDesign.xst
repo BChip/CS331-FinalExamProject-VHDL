@@ -5,7 +5,7 @@ run
 -ifmt mixed
 -ofn TopDesign
 -ofmt NGC
--p xc3s100e-5-vq100
+-p xc3s1600e-5-fg320
 -top TopDesign
 -opt_mode Speed
 -opt_level 1

@@ -1,5 +1,5 @@
 # Clock
-Net "clk"		LOC = "T9";
+Net "clk"		LOC = "C9"; #  | IOSTANDARD = LVCMOS33 ;
 #NET "Clk50Mhz"		PERIOD = 20ns;   # 20ns = 50Mhz
 
 #Net "Socket"		LOC = "D9";
@@ -32,18 +32,6 @@ Net "clk"		LOC = "T9";
 #NET "LD7"		LOC = "P11";
 
 #LCD -------------SET THE PINS
-NET "lcd_data[7]" LOC = P93;
-NET "lcd_data[6]" LOC = P96;
-NET "lcd_data[5]" LOC = P98;
-NET "lcd_data[4]" LOC = P100;
-NET "lcd_data[3]" LOC = P103;
-NET "lcd_data[2]" LOC = P105;
-NET "lcd_data[1]" LOC = P108;
-NET "lcd_data[0]" LOC = P113;
-NET "clk" LOC = P127;
-NET "e" LOC = P118;
-NET "rs" LOC = P124;
-NET "rw" LOC = P122;
 
 # 7 Segment
 #NET "AN0"		LOC = "D14";
@@ -72,7 +60,7 @@ NET "rw" LOC = P122;
 #NET "TXD"		LOC = "R13";
 #NET "RXD_A"		LOC = "N10";
 #NET "TXD_A"		LOC = "T14";
-
+NET "led0" LOC = "F12"; # | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
 # PS/2 Signals
 #NET "PS2D"		LOC = "M15";
 #NET "PS2C"		LOC = "M16";
@@ -112,8 +100,8 @@ NET "rw" LOC = P122;
 
 # Data Signals Chip 1
 NET "pulse_pin" CLOCK_DEDICATED_ROUTE = FALSE;
-NET "pulse_pin"		LOC = "R1";
-NET "Trigger_pin"		LOC = "P1";
+NET "pulse_pin"		LOC = "B6";
+NET "Trigger_pin"		LOC = "A6";
 #NET "IO1<13>"		LOC = "L2";
 #NET "IO1<12>"		LOC = "J2";
 #NET "IO1<11>"		LOC = "H1";

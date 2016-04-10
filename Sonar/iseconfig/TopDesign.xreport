@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2016-03-30T21:01:25</DateModified>
+  <DateModified>2016-04-09T14:30:21</DateModified>
   <ModuleName>TopDesign</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>C:/Xilinx/sonar/Sonar/iseconfig/TopDesign.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Xilinx/sonar/Sonar</ImplementationReportsDirectory>
+  <SavedFilePath>/home/waqas/CS331-FinalExamProject-VHDL/Sonar/iseconfig/TopDesign.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/home/waqas/CS331-FinalExamProject-VHDL/Sonar/</ImplementationReportsDirectory>
   <DateInitialized>2016-03-30T21:01:24</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

@@ -1,18 +1,21 @@
-Release 14.7 - xst P.20131013 (nt64)
+Release 14.7 - xst P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
---> Parameter TMPDIR set to xst/projnav.tmp
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.09 secs
  
---> Parameter xsthdpdir set to xst
+--> 
+Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.09 secs
  
---> Reading design: TopDesign.prj
+--> 
+Reading design: TopDesign.prj
 
 TABLE OF CONTENTS
   1) Synthesis Options Summary
@@ -42,7 +45,7 @@ Ignore Synthesis Constraint File   : NO
 ---- Target Parameters
 Output File Name                   : "TopDesign"
 Output Format                      : NGC
-Target Device                      : xc3s100e-5-vq100
+Target Device                      : xc3s1600e-5-fg320
 
 ---- Source Options
 Top Module Name                    : TopDesign
@@ -104,27 +107,456 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/Xilinx/sonar/Sonar/Counter.vhd" in Library work.
+Compiling vhdl file "/home/waqas/CS331-FinalExamProject-VHDL/Sonar/Counter.vhd" in Library work.
 Architecture behavioral of Entity counter is up to date.
-Compiling vhdl file "C:/Xilinx/sonar/Sonar/Trigger_generator.vhd" in Library work.
+Compiling vhdl file "/home/waqas/CS331-FinalExamProject-VHDL/Sonar/Trigger_generator.vhd" in Library work.
 Architecture behavioral of Entity trigger_generator is up to date.
-Compiling vhdl file "C:/Xilinx/sonar/Sonar/Distance_calculation.vhd" in Library work.
+Compiling vhdl file "/home/waqas/CS331-FinalExamProject-VHDL/Sonar/Distance_calculation.vhd" in Library work.
 Architecture behavioral of Entity distance_calculation is up to date.
-Compiling vhdl file "C:/Xilinx/sonar/Sonar/BCD_converter.vhd" in Library work.
+Compiling vhdl file "/home/waqas/CS331-FinalExamProject-VHDL/Sonar/BCD_converter.vhd" in Library work.
 Architecture behavioral of Entity bcd_converter is up to date.
-Compiling vhdl file "C:/Xilinx/sonar/Sonar/lcd_controller.vhd" in Library work.
-Architecture controller of Entity lcd_controller is up to date.
-Compiling vhdl file "C:/Xilinx/sonar/Sonar/Range_Sensor.vhd" in Library work.
+Compiling vhdl file "/home/waqas/CS331-FinalExamProject-VHDL/Sonar/Range_Sensor.vhd" in Library work.
 Architecture behavioral of Entity range_sensor is up to date.
-Compiling vhdl file "C:/Xilinx/sonar/Sonar/TopDesign.vhd" in Library work.
+Compiling vhdl file "/home/waqas/CS331-FinalExamProject-VHDL/Sonar/TopDesign.vhd" in Library work.
 Entity <topdesign> compiled.
-ERROR:HDLParsers:864 - "C:/Xilinx/sonar/Sonar/TopDesign.vhd" Line 71. Actual, result of operator, associated with Formal Signal, Signal 'lcd_data', is not a Signal. (LRM 2.1.1)
-ERROR:HDLParsers:804 - "C:/Xilinx/sonar/Sonar/TopDesign.vhd" Line 71. Size of concat operation is different than size of the target.
+Entity <topdesign> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <TopDesign> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <range_sensor> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <trigger_generator> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Distance_calculation> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <bcd_converter> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Counter> in library <work> (architecture <behavioral>) with generics.
+	n = 24
+
+Analyzing hierarchy for entity <Counter> in library <work> (architecture <behavioral>) with generics.
+	n = 22
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <TopDesign> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "/home/waqas/CS331-FinalExamProject-VHDL/Sonar/TopDesign.vhd" line 90: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <Ai>
+INFO:Xst:2679 - Register <led0> in unit <TopDesign> has a constant value of 1 during circuit operation. The register is replaced by logic.
+Entity <TopDesign> analyzed. Unit <TopDesign> generated.
+
+Analyzing Entity <range_sensor> in library <work> (Architecture <behavioral>).
+Entity <range_sensor> analyzed. Unit <range_sensor> generated.
+
+Analyzing Entity <trigger_generator> in library <work> (Architecture <behavioral>).
+WARNING:Xst:795 - "/home/waqas/CS331-FinalExamProject-VHDL/Sonar/Trigger_generator.vhd" line 59: Size of operands are different : result is <false>.
+WARNING:Xst:819 - "/home/waqas/CS331-FinalExamProject-VHDL/Sonar/Trigger_generator.vhd" line 50: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <outputCounter>
+Entity <trigger_generator> analyzed. Unit <trigger_generator> generated.
+
+Analyzing generic Entity <Counter.1> in library <work> (Architecture <behavioral>).
+	n = 24
+Entity <Counter.1> analyzed. Unit <Counter.1> generated.
+
+Analyzing Entity <Distance_calculation> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "/home/waqas/CS331-FinalExamProject-VHDL/Sonar/Distance_calculation.vhd" line 54: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <Pulse_width>
+Entity <Distance_calculation> analyzed. Unit <Distance_calculation> generated.
+
+Analyzing generic Entity <Counter.2> in library <work> (Architecture <behavioral>).
+	n = 22
+Entity <Counter.2> analyzed. Unit <Counter.2> generated.
+
+Analyzing Entity <bcd_converter> in library <work> (Architecture <behavioral>).
+Entity <bcd_converter> analyzed. Unit <bcd_converter> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <bcd_converter>.
+    Related source file is "/home/waqas/CS331-FinalExamProject-VHDL/Sonar/BCD_converter.vhd".
+WARNING:Xst:1305 - Output <tens> is never assigned. Tied to value 0000.
+    Found 4-bit comparator greater for signal <bcd_10$cmp_gt0000> created at line 54.
+    Found 4-bit comparator greater for signal <bcd_10$cmp_gt0001> created at line 54.
+    Found 4-bit comparator greater for signal <bcd_10$cmp_gt0002> created at line 54.
+    Found 4-bit comparator greater for signal <bcd_10$cmp_gt0003> created at line 54.
+    Found 4-bit comparator greater for signal <bcd_10$cmp_gt0004> created at line 54.
+    Found 4-bit comparator greater for signal <bcd_10$cmp_gt0005> created at line 54.
+    Found 4-bit adder for signal <bcd_12_9$add0000> created at line 55.
+    Found 4-bit adder for signal <bcd_12_9$add0001> created at line 55.
+    Found 4-bit adder for signal <bcd_12_9$add0002> created at line 55.
+    Found 4-bit adder for signal <bcd_12_9$add0003> created at line 55.
+    Found 4-bit adder for signal <bcd_12_9$add0004> created at line 55.
+    Found 4-bit adder for signal <bcd_12_9$add0005> created at line 55.
+    Found 4-bit comparator greater for signal <bcd_15$cmp_gt0000> created at line 57.
+    Found 4-bit comparator greater for signal <bcd_15$cmp_gt0001> created at line 57.
+    Found 4-bit comparator greater for signal <bcd_15$cmp_gt0002> created at line 57.
+    Found 4-bit adder for signal <bcd_16_13$add0000> created at line 58.
+    Found 4-bit adder for signal <bcd_16_13$add0001> created at line 58.
+    Found 4-bit adder for signal <bcd_16_13$add0002> created at line 58.
+    Summary:
+	inferred   9 Adder/Subtractor(s).
+	inferred   9 Comparator(s).
+Unit <bcd_converter> synthesized.
+
+
+Synthesizing Unit <Counter_1>.
+    Related source file is "/home/waqas/CS331-FinalExamProject-VHDL/Sonar/Counter.vhd".
+    Found 24-bit up counter for signal <count>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <Counter_1> synthesized.
+
+
+Synthesizing Unit <Counter_2>.
+    Related source file is "/home/waqas/CS331-FinalExamProject-VHDL/Sonar/Counter.vhd".
+    Found 22-bit up counter for signal <count>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <Counter_2> synthesized.
+
+
+Synthesizing Unit <trigger_generator>.
+    Related source file is "/home/waqas/CS331-FinalExamProject-VHDL/Sonar/Trigger_generator.vhd".
+    Found 24-bit comparator greater for signal <Trigger$cmp_gt0000> created at line 54.
+    Found 24-bit comparator less for signal <Trigger$cmp_lt0000> created at line 54.
+    Summary:
+	inferred   2 Comparator(s).
+Unit <trigger_generator> synthesized.
+
+
+Synthesizing Unit <Distance_calculation>.
+    Related source file is "/home/waqas/CS331-FinalExamProject-VHDL/Sonar/Distance_calculation.vhd".
+WARNING:Xst:737 - Found 9-bit latch for signal <distance>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 11-bit comparator greater for signal <distance$cmp_gt0000> created at line 62.
+    Found 22x2-bit multiplier for signal <multiplier$mult0000> created at line 60.
+    Summary:
+	inferred   1 Multiplier(s).
+	inferred   1 Comparator(s).
+Unit <Distance_calculation> synthesized.
+
+
+Synthesizing Unit <range_sensor>.
+    Related source file is "/home/waqas/CS331-FinalExamProject-VHDL/Sonar/Range_Sensor.vhd".
+Unit <range_sensor> synthesized.
+
+
+Synthesizing Unit <TopDesign>.
+    Related source file is "/home/waqas/CS331-FinalExamProject-VHDL/Sonar/TopDesign.vhd".
+WARNING:Xst:646 - Signal <Di> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <Ci> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <Bi> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <Ai> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <TopDesign> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 1
+ 22x2-bit multiplier                                   : 1
+# Adders/Subtractors                                   : 9
+ 4-bit adder                                           : 9
+# Counters                                             : 2
+ 22-bit up counter                                     : 1
+ 24-bit up counter                                     : 1
+# Latches                                              : 1
+ 9-bit latch                                           : 1
+# Comparators                                          : 12
+ 11-bit comparator greater                             : 1
+ 24-bit comparator greater                             : 1
+ 24-bit comparator less                                : 1
+ 4-bit comparator greater                              : 9
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1290 - Hierarchical block <Pulsewidth> is unconnected in block <uut4>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <BCDConv> is unconnected in block <uut4>.
+   It will be removed from the design.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 1
+ 22x2-bit multiplier                                   : 1
+# Adders/Subtractors                                   : 9
+ 3-bit adder                                           : 3
+ 4-bit adder                                           : 6
+# Counters                                             : 2
+ 22-bit up counter                                     : 1
+ 24-bit up counter                                     : 1
+# Latches                                              : 1
+ 9-bit latch                                           : 1
+# Comparators                                          : 12
+ 11-bit comparator greater                             : 1
+ 24-bit comparator greater                             : 1
+ 24-bit comparator less                                : 1
+ 4-bit comparator greater                              : 9
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <TopDesign> ...
+
+Optimizing unit <bcd_converter> ...
+
+Optimizing unit <Distance_calculation> ...
+WARNING:Xst:2677 - Node <uut4/Pulsewidth/distance_8> of sequential type is unconnected in block <TopDesign>.
+WARNING:Xst:2677 - Node <uut4/Pulsewidth/distance_7> of sequential type is unconnected in block <TopDesign>.
+WARNING:Xst:2677 - Node <uut4/Pulsewidth/distance_6> of sequential type is unconnected in block <TopDesign>.
+WARNING:Xst:2677 - Node <uut4/Pulsewidth/distance_5> of sequential type is unconnected in block <TopDesign>.
+WARNING:Xst:2677 - Node <uut4/Pulsewidth/distance_4> of sequential type is unconnected in block <TopDesign>.
+WARNING:Xst:2677 - Node <uut4/Pulsewidth/distance_3> of sequential type is unconnected in block <TopDesign>.
+WARNING:Xst:2677 - Node <uut4/Pulsewidth/distance_2> of sequential type is unconnected in block <TopDesign>.
+WARNING:Xst:2677 - Node <uut4/Pulsewidth/distance_1> of sequential type is unconnected in block <TopDesign>.
+WARNING:Xst:2677 - Node <uut4/Pulsewidth/distance_0> of sequential type is unconnected in block <TopDesign>.
+WARNING:Xst:2677 - Node <uut4/Pulsewidth/CounterPulse/count_21> of sequential type is unconnected in block <TopDesign>.
+WARNING:Xst:2677 - Node <uut4/Pulsewidth/CounterPulse/count_20> of sequential type is unconnected in block <TopDesign>.
+WARNING:Xst:2677 - Node <uut4/Pulsewidth/CounterPulse/count_19> of sequential type is unconnected in block <TopDesign>.
+WARNING:Xst:2677 - Node <uut4/Pulsewidth/CounterPulse/count_18> of sequential type is unconnected in block <TopDesign>.
+WARNING:Xst:2677 - Node <uut4/Pulsewidth/CounterPulse/count_17> of sequential type is unconnected in block <TopDesign>.
+WARNING:Xst:2677 - Node <uut4/Pulsewidth/CounterPulse/count_16> of sequential type is unconnected in block <TopDesign>.
+WARNING:Xst:2677 - Node <uut4/Pulsewidth/CounterPulse/count_15> of sequential type is unconnected in block <TopDesign>.
+WARNING:Xst:2677 - Node <uut4/Pulsewidth/CounterPulse/count_14> of sequential type is unconnected in block <TopDesign>.
+WARNING:Xst:2677 - Node <uut4/Pulsewidth/CounterPulse/count_13> of sequential type is unconnected in block <TopDesign>.
+WARNING:Xst:2677 - Node <uut4/Pulsewidth/CounterPulse/count_12> of sequential type is unconnected in block <TopDesign>.
+WARNING:Xst:2677 - Node <uut4/Pulsewidth/CounterPulse/count_11> of sequential type is unconnected in block <TopDesign>.
+WARNING:Xst:2677 - Node <uut4/Pulsewidth/CounterPulse/count_10> of sequential type is unconnected in block <TopDesign>.
+WARNING:Xst:2677 - Node <uut4/Pulsewidth/CounterPulse/count_9> of sequential type is unconnected in block <TopDesign>.
+WARNING:Xst:2677 - Node <uut4/Pulsewidth/CounterPulse/count_8> of sequential type is unconnected in block <TopDesign>.
+WARNING:Xst:2677 - Node <uut4/Pulsewidth/CounterPulse/count_7> of sequential type is unconnected in block <TopDesign>.
+WARNING:Xst:2677 - Node <uut4/Pulsewidth/CounterPulse/count_6> of sequential type is unconnected in block <TopDesign>.
+WARNING:Xst:2677 - Node <uut4/Pulsewidth/CounterPulse/count_5> of sequential type is unconnected in block <TopDesign>.
+WARNING:Xst:2677 - Node <uut4/Pulsewidth/CounterPulse/count_4> of sequential type is unconnected in block <TopDesign>.
+WARNING:Xst:2677 - Node <uut4/Pulsewidth/CounterPulse/count_3> of sequential type is unconnected in block <TopDesign>.
+WARNING:Xst:2677 - Node <uut4/Pulsewidth/CounterPulse/count_2> of sequential type is unconnected in block <TopDesign>.
+WARNING:Xst:2677 - Node <uut4/Pulsewidth/CounterPulse/count_1> of sequential type is unconnected in block <TopDesign>.
+WARNING:Xst:2677 - Node <uut4/Pulsewidth/CounterPulse/count_0> of sequential type is unconnected in block <TopDesign>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block TopDesign, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 24
+ Flip-Flops                                            : 24
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : TopDesign.ngr
+Top Level Output File Name         : TopDesign
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 4
+
+Cell Usage :
+# BELS                             : 136
+#      GND                         : 1
+#      INV                         : 9
+#      LUT1                        : 32
+#      LUT2                        : 3
+#      LUT4                        : 12
+#      MUXCY                       : 54
+#      VCC                         : 1
+#      XORCY                       : 24
+# FlipFlops/Latches                : 24
+#      FDC                         : 24
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 2
+#      OBUF                        : 2
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s1600efg320-5 
+
+ Number of Slices:                       29  out of  14752     0%  
+ Number of Slice Flip Flops:             24  out of  29504     0%  
+ Number of 4 input LUTs:                 56  out of  29504     0%  
+ Number of IOs:                           4
+ Number of bonded IOBs:                   3  out of    250     1%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 24    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-------------------------------------------------------------------------------+-------------------------------------+-------+
+Control Signal                                                                 | Buffer(FF name)                     | Load  |
+-------------------------------------------------------------------------------+-------------------------------------+-------+
+uut4/trigger_gen/resetCounter_inv(uut4/trigger_gen/resetCounter_inv_wg_cy<5>:O)| NONE(uut4/trigger_gen/trigg/count_0)| 24    |
+-------------------------------------------------------------------------------+-------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 4.182ns (Maximum Frequency: 239.129MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 7.711ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 4.182ns (frequency: 239.129MHz)
+  Total number of paths / destination ports: 300 / 24
+-------------------------------------------------------------------------
+Delay:               4.182ns (Levels of Logic = 24)
+  Source:            uut4/trigger_gen/trigg/count_1 (FF)
+  Destination:       uut4/trigger_gen/trigg/count_23 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: uut4/trigger_gen/trigg/count_1 to uut4/trigger_gen/trigg/count_23
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              3   0.514   0.603  uut4/trigger_gen/trigg/count_1 (uut4/trigger_gen/trigg/count_1)
+     LUT1:I0->O            1   0.612   0.000  uut4/trigger_gen/trigg/Mcount_count_cy<1>_rt (uut4/trigger_gen/trigg/Mcount_count_cy<1>_rt)
+     MUXCY:S->O            1   0.404   0.000  uut4/trigger_gen/trigg/Mcount_count_cy<1> (uut4/trigger_gen/trigg/Mcount_count_cy<1>)
+     MUXCY:CI->O           1   0.052   0.000  uut4/trigger_gen/trigg/Mcount_count_cy<2> (uut4/trigger_gen/trigg/Mcount_count_cy<2>)
+     MUXCY:CI->O           1   0.051   0.000  uut4/trigger_gen/trigg/Mcount_count_cy<3> (uut4/trigger_gen/trigg/Mcount_count_cy<3>)
+     MUXCY:CI->O           1   0.051   0.000  uut4/trigger_gen/trigg/Mcount_count_cy<4> (uut4/trigger_gen/trigg/Mcount_count_cy<4>)
+     MUXCY:CI->O           1   0.051   0.000  uut4/trigger_gen/trigg/Mcount_count_cy<5> (uut4/trigger_gen/trigg/Mcount_count_cy<5>)
+     MUXCY:CI->O           1   0.051   0.000  uut4/trigger_gen/trigg/Mcount_count_cy<6> (uut4/trigger_gen/trigg/Mcount_count_cy<6>)
+     MUXCY:CI->O           1   0.051   0.000  uut4/trigger_gen/trigg/Mcount_count_cy<7> (uut4/trigger_gen/trigg/Mcount_count_cy<7>)
+     MUXCY:CI->O           1   0.051   0.000  uut4/trigger_gen/trigg/Mcount_count_cy<8> (uut4/trigger_gen/trigg/Mcount_count_cy<8>)
+     MUXCY:CI->O           1   0.051   0.000  uut4/trigger_gen/trigg/Mcount_count_cy<9> (uut4/trigger_gen/trigg/Mcount_count_cy<9>)
+     MUXCY:CI->O           1   0.051   0.000  uut4/trigger_gen/trigg/Mcount_count_cy<10> (uut4/trigger_gen/trigg/Mcount_count_cy<10>)
+     MUXCY:CI->O           1   0.051   0.000  uut4/trigger_gen/trigg/Mcount_count_cy<11> (uut4/trigger_gen/trigg/Mcount_count_cy<11>)
+     MUXCY:CI->O           1   0.051   0.000  uut4/trigger_gen/trigg/Mcount_count_cy<12> (uut4/trigger_gen/trigg/Mcount_count_cy<12>)
+     MUXCY:CI->O           1   0.051   0.000  uut4/trigger_gen/trigg/Mcount_count_cy<13> (uut4/trigger_gen/trigg/Mcount_count_cy<13>)
+     MUXCY:CI->O           1   0.051   0.000  uut4/trigger_gen/trigg/Mcount_count_cy<14> (uut4/trigger_gen/trigg/Mcount_count_cy<14>)
+     MUXCY:CI->O           1   0.051   0.000  uut4/trigger_gen/trigg/Mcount_count_cy<15> (uut4/trigger_gen/trigg/Mcount_count_cy<15>)
+     MUXCY:CI->O           1   0.051   0.000  uut4/trigger_gen/trigg/Mcount_count_cy<16> (uut4/trigger_gen/trigg/Mcount_count_cy<16>)
+     MUXCY:CI->O           1   0.051   0.000  uut4/trigger_gen/trigg/Mcount_count_cy<17> (uut4/trigger_gen/trigg/Mcount_count_cy<17>)
+     MUXCY:CI->O           1   0.051   0.000  uut4/trigger_gen/trigg/Mcount_count_cy<18> (uut4/trigger_gen/trigg/Mcount_count_cy<18>)
+     MUXCY:CI->O           1   0.051   0.000  uut4/trigger_gen/trigg/Mcount_count_cy<19> (uut4/trigger_gen/trigg/Mcount_count_cy<19>)
+     MUXCY:CI->O           1   0.051   0.000  uut4/trigger_gen/trigg/Mcount_count_cy<20> (uut4/trigger_gen/trigg/Mcount_count_cy<20>)
+     MUXCY:CI->O           1   0.051   0.000  uut4/trigger_gen/trigg/Mcount_count_cy<21> (uut4/trigger_gen/trigg/Mcount_count_cy<21>)
+     MUXCY:CI->O           0   0.051   0.000  uut4/trigger_gen/trigg/Mcount_count_cy<22> (uut4/trigger_gen/trigg/Mcount_count_cy<22>)
+     XORCY:CI->O           1   0.699   0.000  uut4/trigger_gen/trigg/Mcount_count_xor<23> (Result<23>)
+     FDC:D                     0.268          uut4/trigger_gen/trigg/count_23
+    ----------------------------------------
+    Total                      4.182ns (3.579ns logic, 0.603ns route)
+                                       (85.6% logic, 14.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 45 / 1
+-------------------------------------------------------------------------
+Offset:              7.711ns (Levels of Logic = 16)
+  Source:            uut4/trigger_gen/trigg/count_3 (FF)
+  Destination:       Trigger_pin (PAD)
+  Source Clock:      clk rising
+
+  Data Path: uut4/trigger_gen/trigg/count_3 to Trigger_pin
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              4   0.514   0.651  uut4/trigger_gen/trigg/count_3 (uut4/trigger_gen/trigg/count_3)
+     LUT1:I0->O            1   0.612   0.000  uut4/trigger_gen/Mcompar_Trigger_cmp_lt0000_cy<0>_rt (uut4/trigger_gen/Mcompar_Trigger_cmp_lt0000_cy<0>_rt)
+     MUXCY:S->O            1   0.404   0.000  uut4/trigger_gen/Mcompar_Trigger_cmp_lt0000_cy<0> (uut4/trigger_gen/Mcompar_Trigger_cmp_lt0000_cy<0>)
+     MUXCY:CI->O           1   0.051   0.000  uut4/trigger_gen/Mcompar_Trigger_cmp_lt0000_cy<1> (uut4/trigger_gen/Mcompar_Trigger_cmp_lt0000_cy<1>)
+     MUXCY:CI->O           1   0.051   0.000  uut4/trigger_gen/Mcompar_Trigger_cmp_lt0000_cy<2> (uut4/trigger_gen/Mcompar_Trigger_cmp_lt0000_cy<2>)
+     MUXCY:CI->O           1   0.051   0.000  uut4/trigger_gen/Mcompar_Trigger_cmp_lt0000_cy<3> (uut4/trigger_gen/Mcompar_Trigger_cmp_lt0000_cy<3>)
+     MUXCY:CI->O           1   0.051   0.000  uut4/trigger_gen/Mcompar_Trigger_cmp_lt0000_cy<4> (uut4/trigger_gen/Mcompar_Trigger_cmp_lt0000_cy<4>)
+     MUXCY:CI->O           1   0.051   0.000  uut4/trigger_gen/Mcompar_Trigger_cmp_lt0000_cy<5> (uut4/trigger_gen/Mcompar_Trigger_cmp_lt0000_cy<5>)
+     MUXCY:CI->O           1   0.051   0.000  uut4/trigger_gen/Mcompar_Trigger_cmp_lt0000_cy<6> (uut4/trigger_gen/Mcompar_Trigger_cmp_lt0000_cy<6>)
+     MUXCY:CI->O           1   0.051   0.000  uut4/trigger_gen/Mcompar_Trigger_cmp_lt0000_cy<7> (uut4/trigger_gen/Mcompar_Trigger_cmp_lt0000_cy<7>)
+     MUXCY:CI->O           1   0.051   0.000  uut4/trigger_gen/Mcompar_Trigger_cmp_lt0000_cy<8> (uut4/trigger_gen/Mcompar_Trigger_cmp_lt0000_cy<8>)
+     MUXCY:CI->O           1   0.051   0.000  uut4/trigger_gen/Mcompar_Trigger_cmp_lt0000_cy<9> (uut4/trigger_gen/Mcompar_Trigger_cmp_lt0000_cy<9>)
+     MUXCY:CI->O           1   0.051   0.000  uut4/trigger_gen/Mcompar_Trigger_cmp_lt0000_cy<10> (uut4/trigger_gen/Mcompar_Trigger_cmp_lt0000_cy<10>)
+     MUXCY:CI->O           1   0.051   0.000  uut4/trigger_gen/Mcompar_Trigger_cmp_lt0000_cy<11> (uut4/trigger_gen/Mcompar_Trigger_cmp_lt0000_cy<11>)
+     MUXCY:CI->O           1   0.399   0.426  uut4/trigger_gen/Mcompar_Trigger_cmp_lt0000_cy<12> (uut4/trigger_gen/Mcompar_Trigger_cmp_lt0000_cy<12>)
+     LUT2:I1->O            1   0.612   0.357  uut4/trigger_gen/Trigger_and00001 (Trigger_pin_OBUF)
+     OBUF:I->O                 3.169          Trigger_pin_OBUF (Trigger_pin)
+    ----------------------------------------
+    Total                      7.711ns (6.277ns logic, 1.434ns route)
+                                       (81.4% logic, 18.6% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 7.29 secs
+ 
 --> 
 
-Total memory usage is 287232 kilobytes
 
-Number of errors   :    2 (   0 filtered)
-Number of warnings :    0 (   0 filtered)
-Number of infos    :    0 (   0 filtered)
+Total memory usage is 521024 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   43 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
 

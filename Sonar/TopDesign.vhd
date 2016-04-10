@@ -35,10 +35,12 @@ entity TopDesign is
     Port ( pulse_pin : in  STD_LOGIC;
            Trigger_pin : out  STD_LOGIC;
            clk : in  STD_LOGIC;
-           topselDispA : out  STD_LOGIC;
-           topselDispB : out  STD_LOGIC;
-           topselDispC : out  STD_LOGIC;
-           topselDispD : out  STD_LOGIC);
+			  led0 : out STD_LOGIC
+           --topselDispA : out  STD_LOGIC;
+           --topselDispB : out  STD_LOGIC;
+           --topselDispC : out  STD_LOGIC;
+           --topselDispD : out  STD_LOGIC
+			  );
 end TopDesign;
 
 architecture Behavioral of TopDesign is
@@ -51,11 +53,11 @@ Port ( fpgaclk : in  STD_LOGIC;
            centimeters : out  STD_LOGIC_VECTOR (3 downto 0));
 end component;
 
-component lcd_controller
-PORT(
-    clk        : IN    STD_LOGIC;  --system clock
-    lcd_data   : OUT   STD_LOGIC_VECTOR(7 DOWNTO 0)); --data signals for lcd
-end component;
+--component lcd_controller
+--PORT(
+--	 clk        : IN    STD_LOGIC;  --system clock
+--    lcd_data   : OUT   STD_LOGIC_VECTOR(7 DOWNTO 0)); --data signals for lcd
+--end component;
 
 SIGNAL Ai : STD_LOGIC_VECTOR(3 downto 0);
 SIGNAL Bi : STD_LOGIC_VECTOR(3 downto 0);
@@ -67,10 +69,10 @@ SIGNAL sensor_decimeters : STD_LOGIC_VECTOR(3 DOWNTO 0);
 SIGNAL sensor_centimeters : STD_LOGIC_VECTOR(3 downto 0);
 begin
 
-uut2: lcd_controller Port Map( --Work on this 
-		lcd_data => Di & Ci & Bi  & Ai,
-		clk => clk
-	);
+--uut2: lcd_controller Port Map( --Work on this 
+--		clk => clk,
+--		lcd_data => Ai & Bi & Ci
+--	);
 
 uut4 : range_sensor Port Map(
 		fpgaclk => clk,
@@ -85,6 +87,12 @@ Ai <= sensor_centimeters;
 Bi <= sensor_decimeters;
 Ci <= sensor_meters;
 Di <= "0000";
+process(clk)
+Begin
+if(Ai > "0000") then
+	led0 <= '1';
+end if;
+end process;
 
 end Behavioral;
 
