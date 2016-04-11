@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> 
 Reading design: TopDesign.prj
@@ -147,7 +147,6 @@ Analyzing hierarchy for entity <Counter> in library <work> (architecture <behavi
 Analyzing Entity <TopDesign> in library <work> (Architecture <behavioral>).
 WARNING:Xst:819 - "/home/waqas/CS331-FinalExamProject-VHDL/Sonar/TopDesign.vhd" line 90: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <Ai>
-INFO:Xst:2679 - Register <led0> in unit <TopDesign> has a constant value of 1 during circuit operation. The register is replaced by logic.
 Entity <TopDesign> analyzed. Unit <TopDesign> generated.
 
 Analyzing Entity <range_sensor> in library <work> (Architecture <behavioral>).
@@ -255,7 +254,9 @@ Synthesizing Unit <TopDesign>.
 WARNING:Xst:646 - Signal <Di> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <Ci> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <Bi> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <Ai> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 4-bit comparator greater for signal <led0$cmp_gt0000> created at line 92.
+    Summary:
+	inferred   1 Comparator(s).
 Unit <TopDesign> synthesized.
 
 
@@ -272,11 +273,11 @@ Macro Statistics
  24-bit up counter                                     : 1
 # Latches                                              : 1
  9-bit latch                                           : 1
-# Comparators                                          : 12
+# Comparators                                          : 13
  11-bit comparator greater                             : 1
  24-bit comparator greater                             : 1
  24-bit comparator less                                : 1
- 4-bit comparator greater                              : 9
+ 4-bit comparator greater                              : 10
 
 =========================================================================
 
@@ -284,10 +285,6 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-WARNING:Xst:1290 - Hierarchical block <Pulsewidth> is unconnected in block <uut4>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <BCDConv> is unconnected in block <uut4>.
-   It will be removed from the design.
 
 =========================================================================
 Advanced HDL Synthesis Report
@@ -303,11 +300,11 @@ Macro Statistics
  24-bit up counter                                     : 1
 # Latches                                              : 1
  9-bit latch                                           : 1
-# Comparators                                          : 12
+# Comparators                                          : 13
  11-bit comparator greater                             : 1
  24-bit comparator greater                             : 1
  24-bit comparator less                                : 1
- 4-bit comparator greater                              : 9
+ 4-bit comparator greater                              : 10
 
 =========================================================================
 
@@ -320,37 +317,6 @@ Optimizing unit <TopDesign> ...
 Optimizing unit <bcd_converter> ...
 
 Optimizing unit <Distance_calculation> ...
-WARNING:Xst:2677 - Node <uut4/Pulsewidth/distance_8> of sequential type is unconnected in block <TopDesign>.
-WARNING:Xst:2677 - Node <uut4/Pulsewidth/distance_7> of sequential type is unconnected in block <TopDesign>.
-WARNING:Xst:2677 - Node <uut4/Pulsewidth/distance_6> of sequential type is unconnected in block <TopDesign>.
-WARNING:Xst:2677 - Node <uut4/Pulsewidth/distance_5> of sequential type is unconnected in block <TopDesign>.
-WARNING:Xst:2677 - Node <uut4/Pulsewidth/distance_4> of sequential type is unconnected in block <TopDesign>.
-WARNING:Xst:2677 - Node <uut4/Pulsewidth/distance_3> of sequential type is unconnected in block <TopDesign>.
-WARNING:Xst:2677 - Node <uut4/Pulsewidth/distance_2> of sequential type is unconnected in block <TopDesign>.
-WARNING:Xst:2677 - Node <uut4/Pulsewidth/distance_1> of sequential type is unconnected in block <TopDesign>.
-WARNING:Xst:2677 - Node <uut4/Pulsewidth/distance_0> of sequential type is unconnected in block <TopDesign>.
-WARNING:Xst:2677 - Node <uut4/Pulsewidth/CounterPulse/count_21> of sequential type is unconnected in block <TopDesign>.
-WARNING:Xst:2677 - Node <uut4/Pulsewidth/CounterPulse/count_20> of sequential type is unconnected in block <TopDesign>.
-WARNING:Xst:2677 - Node <uut4/Pulsewidth/CounterPulse/count_19> of sequential type is unconnected in block <TopDesign>.
-WARNING:Xst:2677 - Node <uut4/Pulsewidth/CounterPulse/count_18> of sequential type is unconnected in block <TopDesign>.
-WARNING:Xst:2677 - Node <uut4/Pulsewidth/CounterPulse/count_17> of sequential type is unconnected in block <TopDesign>.
-WARNING:Xst:2677 - Node <uut4/Pulsewidth/CounterPulse/count_16> of sequential type is unconnected in block <TopDesign>.
-WARNING:Xst:2677 - Node <uut4/Pulsewidth/CounterPulse/count_15> of sequential type is unconnected in block <TopDesign>.
-WARNING:Xst:2677 - Node <uut4/Pulsewidth/CounterPulse/count_14> of sequential type is unconnected in block <TopDesign>.
-WARNING:Xst:2677 - Node <uut4/Pulsewidth/CounterPulse/count_13> of sequential type is unconnected in block <TopDesign>.
-WARNING:Xst:2677 - Node <uut4/Pulsewidth/CounterPulse/count_12> of sequential type is unconnected in block <TopDesign>.
-WARNING:Xst:2677 - Node <uut4/Pulsewidth/CounterPulse/count_11> of sequential type is unconnected in block <TopDesign>.
-WARNING:Xst:2677 - Node <uut4/Pulsewidth/CounterPulse/count_10> of sequential type is unconnected in block <TopDesign>.
-WARNING:Xst:2677 - Node <uut4/Pulsewidth/CounterPulse/count_9> of sequential type is unconnected in block <TopDesign>.
-WARNING:Xst:2677 - Node <uut4/Pulsewidth/CounterPulse/count_8> of sequential type is unconnected in block <TopDesign>.
-WARNING:Xst:2677 - Node <uut4/Pulsewidth/CounterPulse/count_7> of sequential type is unconnected in block <TopDesign>.
-WARNING:Xst:2677 - Node <uut4/Pulsewidth/CounterPulse/count_6> of sequential type is unconnected in block <TopDesign>.
-WARNING:Xst:2677 - Node <uut4/Pulsewidth/CounterPulse/count_5> of sequential type is unconnected in block <TopDesign>.
-WARNING:Xst:2677 - Node <uut4/Pulsewidth/CounterPulse/count_4> of sequential type is unconnected in block <TopDesign>.
-WARNING:Xst:2677 - Node <uut4/Pulsewidth/CounterPulse/count_3> of sequential type is unconnected in block <TopDesign>.
-WARNING:Xst:2677 - Node <uut4/Pulsewidth/CounterPulse/count_2> of sequential type is unconnected in block <TopDesign>.
-WARNING:Xst:2677 - Node <uut4/Pulsewidth/CounterPulse/count_1> of sequential type is unconnected in block <TopDesign>.
-WARNING:Xst:2677 - Node <uut4/Pulsewidth/CounterPulse/count_0> of sequential type is unconnected in block <TopDesign>.
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -362,8 +328,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 24
- Flip-Flops                                            : 24
+# Registers                                            : 46
+ Flip-Flops                                            : 46
 
 =========================================================================
 
@@ -392,20 +358,25 @@ Design Statistics
 # IOs                              : 4
 
 Cell Usage :
-# BELS                             : 136
+# BELS                             : 302
 #      GND                         : 1
-#      INV                         : 9
-#      LUT1                        : 32
-#      LUT2                        : 3
-#      LUT4                        : 12
-#      MUXCY                       : 54
+#      INV                         : 12
+#      LUT1                        : 56
+#      LUT2                        : 36
+#      LUT3                        : 6
+#      LUT4                        : 30
+#      MUXCY                       : 104
 #      VCC                         : 1
-#      XORCY                       : 24
-# FlipFlops/Latches                : 24
+#      XORCY                       : 56
+# FlipFlops/Latches                : 55
 #      FDC                         : 24
-# Clock Buffers                    : 1
+#      FDCE                        : 22
+#      LD_1                        : 9
+# Clock Buffers                    : 2
+#      BUFG                        : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 2
+# IO Buffers                       : 3
+#      IBUF                        : 1
 #      OBUF                        : 2
 =========================================================================
 
@@ -414,12 +385,12 @@ Device utilization summary:
 
 Selected Device : 3s1600efg320-5 
 
- Number of Slices:                       29  out of  14752     0%  
- Number of Slice Flip Flops:             24  out of  29504     0%  
- Number of 4 input LUTs:                 56  out of  29504     0%  
+ Number of Slices:                       73  out of  14752     0%  
+ Number of Slice Flip Flops:             55  out of  29504     0%  
+ Number of 4 input LUTs:                140  out of  29504     0%  
  Number of IOs:                           4
- Number of bonded IOBs:                   3  out of    250     1%  
- Number of GCLKs:                         1  out of     24     4%  
+ Number of bonded IOBs:                   4  out of    250     1%  
+ Number of GCLKs:                         2  out of     24     8%  
 
 ---------------------------
 Partition Resource Summary:
@@ -442,24 +413,26 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 24    |
+clk                                | BUFGP                  | 46    |
+pulse_pin                          | IBUF+BUFG              | 9     |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
 ----------------------------------------
--------------------------------------------------------------------------------+-------------------------------------+-------+
-Control Signal                                                                 | Buffer(FF name)                     | Load  |
--------------------------------------------------------------------------------+-------------------------------------+-------+
-uut4/trigger_gen/resetCounter_inv(uut4/trigger_gen/resetCounter_inv_wg_cy<5>:O)| NONE(uut4/trigger_gen/trigg/count_0)| 24    |
--------------------------------------------------------------------------------+-------------------------------------+-------+
+-------------------------------------------------------------------------------+-------------------------------------------+-------+
+Control Signal                                                                 | Buffer(FF name)                           | Load  |
+-------------------------------------------------------------------------------+-------------------------------------------+-------+
+uut4/trigger_gen/resetCounter_inv(uut4/trigger_gen/resetCounter_inv_wg_cy<5>:O)| NONE(uut4/trigger_gen/trigg/count_0)      | 24    |
+Trigger_pin_OBUF(uut4/trigger_gen/Trigger_and00001:O)                          | NONE(uut4/Pulsewidth/CounterPulse/count_0)| 22    |
+-------------------------------------------------------------------------------+-------------------------------------------+-------+
 
 Timing Summary:
 ---------------
 Speed Grade: -5
 
    Minimum period: 4.182ns (Maximum Frequency: 239.129MHz)
-   Minimum input arrival time before clock: No path found
-   Maximum output required time after clock: 7.711ns
+   Minimum input arrival time before clock: 2.611ns
+   Maximum output required time after clock: 16.631ns
    Maximum combinational path delay: No path found
 
 Timing Detail:
@@ -469,7 +442,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
   Clock period: 4.182ns (frequency: 239.129MHz)
-  Total number of paths / destination ports: 300 / 24
+  Total number of paths / destination ports: 553 / 46
 -------------------------------------------------------------------------
 Delay:               4.182ns (Levels of Logic = 24)
   Source:            uut4/trigger_gen/trigg/count_1 (FF)
@@ -512,10 +485,59 @@ Delay:               4.182ns (Levels of Logic = 24)
                                        (85.6% logic, 14.4% route)
 
 =========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 22 / 22
+-------------------------------------------------------------------------
+Offset:              2.611ns (Levels of Logic = 1)
+  Source:            pulse_pin (PAD)
+  Destination:       uut4/Pulsewidth/CounterPulse/count_21 (FF)
+  Destination Clock: clk rising
+
+  Data Path: pulse_pin to uut4/Pulsewidth/CounterPulse/count_21
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            23   1.106   1.022  pulse_pin_IBUF (pulse_pin_IBUF1)
+     FDCE:CE                   0.483          uut4/Pulsewidth/CounterPulse/count_0
+    ----------------------------------------
+    Total                      2.611ns (1.589ns logic, 1.022ns route)
+                                       (60.9% logic, 39.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'pulse_pin'
+  Total number of paths / destination ports: 1195 / 1
+-------------------------------------------------------------------------
+Offset:              16.631ns (Levels of Logic = 12)
+  Source:            uut4/Pulsewidth/distance_8 (LATCH)
+  Destination:       led0 (PAD)
+  Source Clock:      pulse_pin rising
+
+  Data Path: uut4/Pulsewidth/distance_8 to led0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD_1:G->Q             5   0.588   0.690  uut4/Pulsewidth/distance_8 (uut4/Pulsewidth/distance_8)
+     LUT4:I0->O            4   0.612   0.568  uut4/BCDConv/bcd_10_mux00011 (uut4/BCDConv/Madd_bcd_12_9_add0002_lut<2>)
+     LUT4:I1->O            3   0.612   0.520  uut4/BCDConv/bcd_10_cmp_gt0002 (uut4/BCDConv/bcd_10_cmp_gt0002)
+     LUT3:I1->O            2   0.612   0.449  uut4/BCDConv/Madd_bcd_12_9_add0003_cy<1>11 (uut4/BCDConv/Madd_bcd_12_9_add0003_cy<1>)
+     LUT4:I1->O            4   0.612   0.568  uut4/BCDConv/bcd_10_cmp_gt0003 (uut4/BCDConv/bcd_10_cmp_gt0003)
+     LUT2:I1->O            2   0.612   0.532  uut4/BCDConv/bcd_10_mux000321 (uut4/BCDConv/N61)
+     LUT4:I0->O            3   0.612   0.520  uut4/BCDConv/bcd_12_mux000411 (uut4/BCDConv/N121)
+     LUT3:I1->O            2   0.612   0.532  uut4/BCDConv/bcd_10_mux000421 (uut4/BCDConv/N7)
+     LUT3:I0->O            1   0.612   0.387  led0149_SW0_SW0 (N14)
+     LUT4:I2->O            1   0.612   0.509  led0149_SW0 (N12)
+     LUT4:I0->O            1   0.612   0.509  led0218_SW1 (N18)
+     LUT4:I0->O            1   0.612   0.357  led0218 (led0_OBUF)
+     OBUF:I->O                 3.169          led0_OBUF (led0)
+    ----------------------------------------
+    Total                     16.631ns (10.489ns logic, 6.142ns route)
+                                       (63.1% logic, 36.9% route)
+
+=========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
   Total number of paths / destination ports: 45 / 1
 -------------------------------------------------------------------------
-Offset:              7.711ns (Levels of Logic = 16)
+Offset:              8.376ns (Levels of Logic = 16)
   Source:            uut4/trigger_gen/trigg/count_3 (FF)
   Destination:       Trigger_pin (PAD)
   Source Clock:      clk rising
@@ -539,24 +561,24 @@ Offset:              7.711ns (Levels of Logic = 16)
      MUXCY:CI->O           1   0.051   0.000  uut4/trigger_gen/Mcompar_Trigger_cmp_lt0000_cy<10> (uut4/trigger_gen/Mcompar_Trigger_cmp_lt0000_cy<10>)
      MUXCY:CI->O           1   0.051   0.000  uut4/trigger_gen/Mcompar_Trigger_cmp_lt0000_cy<11> (uut4/trigger_gen/Mcompar_Trigger_cmp_lt0000_cy<11>)
      MUXCY:CI->O           1   0.399   0.426  uut4/trigger_gen/Mcompar_Trigger_cmp_lt0000_cy<12> (uut4/trigger_gen/Mcompar_Trigger_cmp_lt0000_cy<12>)
-     LUT2:I1->O            1   0.612   0.357  uut4/trigger_gen/Trigger_and00001 (Trigger_pin_OBUF)
+     LUT2:I1->O           23   0.612   1.022  uut4/trigger_gen/Trigger_and00001 (Trigger_pin_OBUF)
      OBUF:I->O                 3.169          Trigger_pin_OBUF (Trigger_pin)
     ----------------------------------------
-    Total                      7.711ns (6.277ns logic, 1.434ns route)
-                                       (81.4% logic, 18.6% route)
+    Total                      8.376ns (6.277ns logic, 2.099ns route)
+                                       (74.9% logic, 25.1% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 11.00 secs
-Total CPU time to Xst completion: 7.29 secs
+Total REAL time to Xst completion: 18.00 secs
+Total CPU time to Xst completion: 7.43 secs
  
 --> 
 
 
-Total memory usage is 521024 kilobytes
+Total memory usage is 521328 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   43 (   0 filtered)
-Number of infos    :    1 (   0 filtered)
+Number of warnings :    9 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
 

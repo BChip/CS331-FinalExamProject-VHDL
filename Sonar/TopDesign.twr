@@ -45,7 +45,15 @@ Clock clk to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-Trigger_pin |   12.062(R)|clk_BUFGP         |   0.000|
+Trigger_pin |   15.011(R)|clk_BUFGP         |   0.000|
+------------+------------+------------------+--------+
+
+Clock pulse_pin to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+led0        |   20.160(R)|pulse_pin_IBUF    |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clk
@@ -53,18 +61,27 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    3.789|         |         |         |
+clk            |    3.792|         |         |         |
+pulse_pin      |    2.194|    2.194|         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock pulse_pin
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    9.178|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Sat Apr  9 22:03:06 2016 
+Analysis completed Mon Apr 11 10:41:12 2016 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 376 MB
+Peak Memory Usage: 377 MB
 
 
 

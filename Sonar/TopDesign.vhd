@@ -91,6 +91,8 @@ process(clk)
 Begin
 if(Ai > "0000") then
 	led0 <= '1';
+else
+	led0 <= '0';
 end if;
 end process;
 

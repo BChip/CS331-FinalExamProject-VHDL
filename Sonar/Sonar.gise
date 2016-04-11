@@ -148,7 +148,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1460252253" xil_pn:in_ck="5232761852898784012" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-897437083460481432" xil_pn:start_ts="1460252228">
+    <transform xil_pn:end_ts="1460385583" xil_pn:in_ck="5232761852898784012" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-897437083460481432" xil_pn:start_ts="1460385543">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -174,7 +174,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1460253726" xil_pn:in_ck="4859253830037070830" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="2482870923411164856" xil_pn:start_ts="1460253712">
+    <transform xil_pn:end_ts="1460385601" xil_pn:in_ck="4859253830037070830" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="2482870923411164856" xil_pn:start_ts="1460385584">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="TopDesign.bld"/>
@@ -183,9 +183,8 @@
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1460253743" xil_pn:in_ck="2593243848370358334" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-7002665599540990466" xil_pn:start_ts="1460253726">
+    <transform xil_pn:end_ts="1460385629" xil_pn:in_ck="2593243848370358334" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-7002665599540990466" xil_pn:start_ts="1460385601">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="TopDesign.pcf"/>
       <outfile xil_pn:name="TopDesign_map.map"/>
@@ -197,7 +196,7 @@
       <outfile xil_pn:name="TopDesign_usage.xml"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1460253787" xil_pn:in_ck="-3493831324797516201" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="-1229177303592316936" xil_pn:start_ts="1460253743">
+    <transform xil_pn:end_ts="1460385672" xil_pn:in_ck="-3493831324797516201" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="-1229177303592316936" xil_pn:start_ts="1460385629">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -212,9 +211,8 @@
       <outfile xil_pn:name="TopDesign_par.xrpt"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1460253813" xil_pn:in_ck="-1686219595154353936" xil_pn:name="TRANEXT_bitFile_spartan3e" xil_pn:prop_ck="-7817169320884990698" xil_pn:start_ts="1460253794">
+    <transform xil_pn:end_ts="1460385802" xil_pn:in_ck="-1686219595154353936" xil_pn:name="TRANEXT_bitFile_spartan3e" xil_pn:prop_ck="-7817169320884990698" xil_pn:start_ts="1460385761">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="TopDesign.bgn"/>
       <outfile xil_pn:name="TopDesign.bit"/>
@@ -228,8 +226,10 @@
     <transform xil_pn:end_ts="1460253906" xil_pn:in_ck="-1686219595154366790" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="5582947192412673156" xil_pn:start_ts="1460253823">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
     </transform>
-    <transform xil_pn:end_ts="1460253787" xil_pn:in_ck="2593243848370358202" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416187" xil_pn:start_ts="1460253780">
+    <transform xil_pn:end_ts="1460385672" xil_pn:in_ck="2593243848370358202" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416187" xil_pn:start_ts="1460385667">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="TopDesign.twr"/>

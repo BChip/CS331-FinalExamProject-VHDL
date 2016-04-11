@@ -58,3 +58,9 @@ map -intstyle ise -p xc3s1600e-fg320-5 -cm area -ir off -pr off -c 100 -o TopDes
 par -w -intstyle ise -ol high -t 1 TopDesign_map.ncd TopDesign.ncd TopDesign.pcf 
 trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TopDesign.twx TopDesign.ncd -o TopDesign.twr TopDesign.pcf -ucf Spartan-3e.ucf 
 bitgen -intstyle ise -f TopDesign.ut TopDesign.ncd 
+xst -intstyle ise -ifn "/home/waqas/CS331-FinalExamProject-VHDL/Sonar/TopDesign.xst" -ofn "/home/waqas/CS331-FinalExamProject-VHDL/Sonar/TopDesign.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Spartan-3e.ucf -p xc3s1600e-fg320-5 TopDesign.ngc TopDesign.ngd  
+map -intstyle ise -p xc3s1600e-fg320-5 -cm area -ir off -pr off -c 100 -o TopDesign_map.ncd TopDesign.ngd TopDesign.pcf 
+par -w -intstyle ise -ol high -t 1 TopDesign_map.ncd TopDesign.ncd TopDesign.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml TopDesign.twx TopDesign.ncd -o TopDesign.twr TopDesign.pcf -ucf Spartan-3e.ucf 
+bitgen -intstyle ise -f TopDesign.ut TopDesign.ncd 
