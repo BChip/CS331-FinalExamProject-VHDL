@@ -48,22 +48,33 @@ signal outputCounter : STD_LOGIC_VECTOR(23 downto 0);
 begin
 	trigg : Counter generic map(24) port map(clk,'1',resetCounter,outputCounter);
 	process(clk)
-constant ms250 : STD_LOGIC_VECTOR(23 downto 0) := "001011011100011011000000"; --to generate 250ms pulse divide the main FPGA board clock that is 50MHZ with 4HZ( or 1/250x10^-3)
-constant ms250And100us : STD_LOGIC_VECTOR(23 downto 0) := "001011011101101001001000"; -- to generate (250ms+100us) pulse divide the main FPGA board clock that is 50MHZ with 3.9984 HZ( or 1/250x10^-3+0.1*10^-3)
+constant ms250 : STD_LOGIC_VECTOR(23 downto 0) := "001011011100011011000000"; --to generate 100ms pulse divide the main FPGA board clock that is 50MHZ with 4HZ( or 1/250x10^-3)
+--constant ms250And100us : STD_LOGIC_VECTOR(23 downto 0) := "001011011101101001001000"; -- to generate (250ms+100us) pulse divide the main FPGA board clock that is 50MHZ with 3.9984 HZ( or 1/250x10^-3+0.1*10^-3)
 	begin
-		if(outputCounter > ms250 and outputCounter < ms250And100us) then
-			trigger <= '1';
-		else
+	if(clk'event and clk <= '1') then
+		if(outputCounter > ms250 ) then --and outputCounter < ms250And100us) then
 			trigger <= '0';
-		end if;
-		if(outputCounter = ms250And100us or outputCounter = "XXXXXXXXXXXXXXXXXXXXXXXXXXXX") then
+			outputCounter <= '0';
 			resetCounter <= '0';
 		else
-			resetCounter <= '1';
+			trigger <= '1';
+			outputCounter <= resetCounter + '1';
 		end if;
+	end if;	
 	end process;
-
-
-
+	
 end Behavioral;
+
+--if(clk'event and clk = '1') then
+ --if(outputCounter >= ms250 and outputCounter < ms250And100us) then
+ --trigger <= '1';
+ --else
+ --trigger <= '0';
+ --end if;
+
+ --if(outputCounter = ms250And100us) then
+ --resetCounter <= '0';
+-- else
+ --resetCounter <= '1';
+-- end if;
 
